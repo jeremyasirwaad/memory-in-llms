@@ -1,0 +1,154 @@
+/* ── TokenCounter ── */
+.token-counter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .token-counter {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Input Section ── */
+.token-counter__input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.token-counter__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.token-counter__textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.token-counter__textarea:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 16px rgba(0, 212, 255, 0.15);
+}
+
+.token-counter__textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* ── Stats Row ── */
+.token-counter__stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.token-counter__stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.6rem 0.5rem;
+  background: var(--bg-card);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 212, 255, 0.08);
+}
+
+.token-counter__stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.token-counter__stat-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Visualization Section ── */
+.token-counter__viz-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.token-counter__viz-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.token-counter__viz-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.token-counter__viz-hint {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.token-counter__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 1rem;
+  background: var(--bg-card);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 212, 255, 0.08);
+  min-height: 160px;
+  max-height: 280px;
+  overflow-y: auto;
+  align-content: flex-start;
+}
+
+/* ── Token Chip ── */
+.token-counter__chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--chip-color);
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--chip-color);
+  border-radius: 5px;
+  white-space: pre;
+  cursor: default;
+  transition: box-shadow 0.15s;
+}
+
+.token-counter__chip:hover {
+  box-shadow: 0 0 10px var(--chip-glow);
+}
+
+.token-counter__empty {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+  align-self: center;
+  margin: auto;
+}

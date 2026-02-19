@@ -1,0 +1,165 @@
+/* ── ContextWindowComparison ── */
+.ctx-compare {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Header ── */
+.ctx-compare__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ctx-compare__title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── Toggle ── */
+.ctx-compare__toggle {
+  display: flex;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-card);
+  cursor: pointer;
+  padding: 0;
+}
+
+.ctx-compare__toggle-opt {
+  padding: 0.3rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  transition: background 0.2s, color 0.2s;
+}
+
+.ctx-compare__toggle-opt--active {
+  background: var(--accent-blue);
+  color: var(--bg-deep);
+}
+
+/* ── Chart ── */
+.ctx-compare__chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+/* ── Row ── */
+.ctx-compare__row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .ctx-compare__row {
+    grid-template-columns: 90px 1fr;
+  }
+}
+
+.ctx-compare__label {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.ctx-compare__model-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.ctx-compare__model-year {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+/* ── Bar ── */
+.ctx-compare__bar-track {
+  position: relative;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+}
+
+.ctx-compare__bar {
+  height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--bar-color) 80%, transparent) 0%,
+    var(--bar-color) 100%
+  );
+  box-shadow: 0 0 14px var(--bar-glow);
+  min-width: 4px;
+}
+
+.ctx-compare__bar-value {
+  position: absolute;
+  right: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  pointer-events: none;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Tooltip ── */
+.ctx-compare__tooltip {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 140px;
+  z-index: 10;
+  background: var(--bg-elevated);
+  border: 1px solid var(--tip-color);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  min-width: 160px;
+}
+
+.ctx-compare__tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.ctx-compare__tooltip-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.ctx-compare__tooltip-value {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ── Footnote ── */
+.ctx-compare__footnote {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-align: center;
+}
