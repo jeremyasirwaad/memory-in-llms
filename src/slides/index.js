@@ -2,6 +2,7 @@ import Title from './00-Title';
 import DigitalAmnesia from './01-DigitalAmnesia';
 import LLMsAreStateless from './02-LLMsAreStateless';
 import WhatIsContextWindow from './03-WhatIsContextWindow';
+import WhatIsAToken from './03a-WhatIsAToken';
 import TokensExplained from './04-TokensExplained';
 import ContextArmsRace from './05-ContextArmsRace';
 import LostInTheMiddle from './06-LostInTheMiddle';
@@ -23,6 +24,7 @@ const SLIDES = [
   DigitalAmnesia,
   LLMsAreStateless,
   WhatIsContextWindow,
+  WhatIsAToken,
   TokensExplained,
   ContextArmsRace,
   LostInTheMiddle,
